@@ -64,6 +64,31 @@
     color: chartreuse;
 }
 
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
 
 /* home section styling */
 
@@ -122,18 +147,27 @@
 section {
     padding: 100px 0;
 }
-.about, .services, .skills, .teams, .contact{
+
+.about,
+.services,
+.skills,
+.teams,
+.contact,
+footer {
     font-family: 'Poppins', sans-serif;
 }
+
 .about .about-content,
 .services .serv-content,
 .skills .skills-content,
-.services .serv-content , .skills .skills-content{
+.services .serv-content,
+.skills .skills-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
+
 section .title {
     position: relative;
     text-align: center;
@@ -169,13 +203,9 @@ section .title::after {
 
 /* about section styling */
 
-
-
 .about .title::after {
     content: "who i am";
 }
-
-
 
 .about .about-content .left {
     width: 45%;
@@ -280,27 +310,32 @@ section .title::after {
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.skills .title::after{
-    content:"what i know" ;
+
+.skills .title::after {
+    content: "what i know";
 }
+
 
 /* skills section styling */
-.skills .title::after{
-    content:"what i know" ;
+
+.skills .title::after {
+    content: "what i know";
 }
 
-.skills .skills-content .column{
+.skills .skills-content .column {
     width: calc(50% - 30px);
 }
 
-.skills .skills-content .left .text{
+.skills .skills-content .left .text {
     font-size: 20px;
     font-weight: 600;
     margin-botton: 10px;
 }
+
 .skills .skills-content .left p {
-    text-align:justify;
+    text-align: justify;
 }
+
 .skills .skills-content .left a {
     display: inline-block;
     background: crimson;
@@ -310,167 +345,190 @@ section .title::after {
     margin-top: 20px;
     border-radius: 6px;
     border: 2px solid chartreuse;
-    transition: all 0.3s ease;   
+    transition: all 0.3s ease;
 }
+
 .skills .skills-content .left a:hover {
     color: crimson;
     background: none;
 }
-.skills .skills-content .right .bars{
+
+.skills .skills-content .right .bars {
     margin-bottom: 15px;
 }
 
-.skills .skills-content .right .info{
-    display:flex;
-    margin-bottom:5px;
+.skills .skills-content .right .info {
+    display: flex;
+    margin-bottom: 5px;
     align-items: center;
     justify-content: space-between;
 }
 
-.skills .skills-content .right span{
-    font-weight:500;
+.skills .skills-content .right span {
+    font-weight: 500;
     font-size: 18px;
 }
-.skills .skills-content .right .line{
+
+.skills .skills-content .right .line {
     height: 5px;
     width: 100%;
     background: lightgrey;
     position: relative;
-    
 }
-.skills .skills-content .right .line::before{
+
+.skills .skills-content .right .line::before {
     content: "";
     position: absolute;
-    height: 100% ;
+    height: 100%;
     left: 0;
     top: 0;
     background: crimson;
 }
 
-.skills-content .right .html::before{
+.skills-content .right .html::before {
     width: 90%;
 }
-.skills-content .right .css::before{
-    width: 60%;
-}
-.skills-content .right .javascript::before{
-    width: 40%;
-}
-.skills-content .right .php::before{
-    width: 70%;
-}
-.skills-content .right .jee::before{
-    width: 80%;
-}
-.skills-content .right .mysql::before{
+
+.skills-content .right .css::before {
     width: 60%;
 }
 
+.skills-content .right .javascript::before {
+    width: 40%;
+}
+
+.skills-content .right .php::before {
+    width: 70%;
+}
+
+.skills-content .right .jee::before {
+    width: 80%;
+}
+
+.skills-content .right .mysql::before {
+    width: 60%;
+}
 
 
 /* contact section styling */
-.contact .title::after{
-    content:"get in touch";
+
+.contact .title::after {
+    content: "get in touch";
 }
-.contact .contact-content .column{
+
+.contact .contact-content .column {
     width: calc(50% - 30px);
 }
 
-.contact .contact-content .text{
+.contact .contact-content .text {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.contact .contact-content .left p{
+.contact .contact-content .left p {
     text-align: justify;
 }
 
-.contact .contact-content .left .icons{
+.contact .contact-content .left .icons {
     margin: 10px 0;
 }
-.contact .contact-content .row{
+
+.contact .contact-content .row {
     display: flex;
     height: 65px;
     align-items: center;
 }
-.contact .contact-content .row .info{
-    margin-left: 30px;    
+
+.contact .contact-content .row .info {
+    margin-left: 30px;
 }
-.contact .contact-content .row i{
-    font-size: 25px;  
-    color: crimson;  
+
+.contact .contact-content .row i {
+    font-size: 25px;
+    color: crimson;
 }
-.contact .contact-content .info .head{
-    font-weight: 500;    
+
+.contact .contact-content .info .head {
+    font-weight: 500;
 }
-.contact .contact-content .info .sub-title{
+
+.contact .contact-content .info .sub-title {
     color: #333;
 }
 
-.contact .right form .fields{
+.contact .right form .fields {
     display: flex;
 }
+
 .contact .right form .field,
-.contact .right form .fields .field{
-    height:45px;
+.contact .right form .fields .field {
+    height: 45px;
     width: 100%;
     margin-bottom: 15px;
 }
-.contact .right form .textarea{
+
+.contact .right form .textarea {
     height: 80px;
     width: 100%;
 }
-.contact .right form .name{
+
+.contact .right form .name {
     margin-right: 10px;
 }
-.contact .right form .email{
+
+.contact .right form .email {
     margin-left: 10px;
 }
+
 .contact .right form .field input,
-.contact .right form .textarea textarea{
-    height:100%;
+.contact .right form .textarea textarea {
+    height: 100%;
     width: 100%;
     border: 1px solid lightgrey;
     border-radius: 6px;
-    outline:none;
-    padding:0 15px;
+    outline: none;
+    padding: 0 15px;
     font-size: 17px;
     font-family: 'Poppins', sans-serif;
 }
 
-.contact .right form .button{
+.contact .right form .button {
     height: 47px;
     width: 170px;
 }
-.contact .right form .button button{
+
+.contact .right form .button button {
     height: 100%;
-    width: 100%;   
+    width: 100%;
     border: 2px solid crimson;
     background: crimson;
-    color: #fff; 
+    color: #fff;
     font-size: 20px;
     font-weight: 500;
 }
 
 
+/* footer section styling */
 
+footer {
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
 
+footer span a {
+    color: crimson;
+    text-decoration: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+footer span a:hover {
+    text-decoration: underline;
+}
 
 #particles-js {
     height: 50%;
     background: #000000;
+    background-size: cover;
+    background-position: center;
 }
